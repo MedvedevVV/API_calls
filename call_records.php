@@ -84,7 +84,7 @@ function file_string_delete()
       $file_name_delete = ("records/" . $files[$j]);
       $time_create = filemtime($file_name_delete);
       $realtime = time();
-      if (($realtime - $time_create) > 120) {
+      if (($realtime - $time_create) > 86400) {
           $file = file('index.php');
           for ($k = 0; $k < count($file); $k++) {
               if (strpos($file[$k], $file_name_delete) !== false) {
